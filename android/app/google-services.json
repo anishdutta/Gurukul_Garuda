@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "643594602922",
+    "firebase_url": "https://gurukul-e63df.firebaseio.com",
+    "project_id": "gurukul-e63df",
+    "storage_bucket": "gurukul-e63df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:643594602922:android:ceed3f68a4c5d8b7ef03d3",
+        "android_client_info": {
+          "package_name": "com.example.educationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "643594602922-l8lqk25ukiga7mthikuitk8brrpcfodb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.educationapp",
+            "certificate_hash": "99bf7288455540179c6ebb6733acc602c4e8e6b2"
+          }
+        },
+        {
+          "client_id": "643594602922-id12qrcc2b2qa61rjjv87a9pkk2evoei.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoI1WvJNYAHKxbVT6iFtFQ6KRouV34Ay0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "643594602922-id12qrcc2b2qa61rjjv87a9pkk2evoei.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
