@@ -1,4 +1,5 @@
 import 'package:educationapp/dashboard/class_id_page.dart';
+import 'package:educationapp/dashboard/dashboard.dart';
 import 'package:educationapp/login/login.dart';
 import 'package:educationapp/sign_up/sign_up.dart';
 import 'package:educationapp/time_table/time_table.dart';

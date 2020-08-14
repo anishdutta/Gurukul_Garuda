@@ -4,6 +4,9 @@ import 'package:educationapp/dashboard/rounded_input_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:educationapp/utilities/database.dart';
+
 
 class ClassIDPage extends StatefulWidget {
   @override
@@ -11,6 +14,25 @@ class ClassIDPage extends StatefulWidget {
 }
 
 class _ClassIDPageState extends State<ClassIDPage> {
+  final _auth = FirebaseAuth.instance;
+  FirebaseUser loggedInUser;
+  @override
+  void initState() {
+    super.initState();
+    getCurrentUser();
+  }
+  void getCurrentUser() async {
+    try {
+      final user = await _auth.currentUser();
+      if (user != null) {
+        loggedInUser = user;
+        print(loggedInUser.uid);
+      }
+    } catch (e) {
+      print(e);
+    }
+  }
+  String Code;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -52,7 +74,9 @@ class _ClassIDPageState extends State<ClassIDPage> {
             SizedBox(height: size.height * 0.09),
             RoundedInputField(
               hintText: "Class Code",
-              onChanged: (value) {},
+              onChanged: (value) {
+                Code = value;
+              },
             ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 10),
@@ -63,10 +87,12 @@ class _ClassIDPageState extends State<ClassIDPage> {
                   padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                   color: Color(0xFF6F35A5),
                   onPressed: () {
-                    Navigator.push(
-                        context,
-                        PageTransition(
-                            type: PageTransitionType.fade, child: Dashboard()));
+                    Database(uid: loggedInUser.uid).updateUserData3(
+                        '$Code');
+//                    Navigator.push(
+//                        context,
+//                        PageTransition(
+//                            type: PageTransitionType.fade, child: Dashboard()));
                   },
                   child: Text(
                     'Proceed',
