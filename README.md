@@ -1,4 +1,4 @@
-# educationapp
+# Gurukul App
 
 A new Flutter application.
 
