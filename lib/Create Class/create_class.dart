@@ -27,7 +27,7 @@ class _CreateClassState extends State<CreateClass> {
     });
   }
   _makePostRequest() async {
-    // set up POST request arguments
+    // set up POST requtgest arguments
     String url = 'https://2b9qafqhs6.execute-api.ap-south-1.amazonaws.com/v2/xyz/ztx';
     Map<String, String> headers = {"Content-type": "application/json"};
     String json = '{'
