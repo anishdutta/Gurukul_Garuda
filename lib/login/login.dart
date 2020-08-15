@@ -1,4 +1,5 @@
 import 'package:educationapp/dashboard/dashboard.dart';
+import 'package:educationapp/post_api_form/ClassCreate.dart';
 import 'package:educationapp/sign_up/sign_up.dart';
 import 'package:educationapp/utilities/constants.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -8,8 +9,6 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:platform_alert_dialog/platform_alert_dialog.dart';
-import 'package:grouped_buttons/grouped_buttons.dart';
-
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -18,6 +17,7 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   bool _rememberMe = false;
+  int flag = 0;
   bool showSpinner = false;
 //  String email;
 //  String password;
@@ -194,7 +194,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Text(
-            'Remember me',
+            'I am the Admin',
             style: kLabelStyle,
           ),
         ],
@@ -212,18 +212,26 @@ class _LoginScreenState extends State<LoginScreen> {
           setState(() {
             showSpinner = true;
           });
-
           try {
             final newUser = await _auth.signInWithEmailAndPassword(
                 email: email.text, password: password.text);
-
             if (newUser != null) {
-              Navigator.push(
-                  context,
-                  PageTransition(
-                    type: PageTransitionType.fade,
-                    child: Dashboard(),
-                  ));
+              flag = _rememberMe == true ? 1 : 0;
+              if (flag != 1) {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.fade,
+                      child: Dashboard(),
+                    ));
+              } else {
+                Navigator.push(
+                    context,
+                    PageTransition(
+                      type: PageTransitionType.fade,
+                      child: CreateClass(),
+                    ));
+              }
               setState(() {
                 showSpinner = false;
               });
@@ -474,4 +482,3 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 }
-

@@ -6,18 +6,13 @@ class Database {
   Database({this.uid});
 
   final CollectionReference profileCollection =
-  Firestore.instance.collection('Classes');
-
-  final CollectionReference profileCollection2 = Firestore.instance.collection(
-      'Water-log');
+      Firestore.instance.collection('Classes');
 
   Future updateUserData3(String classes) async {
     return await profileCollection.document(uid).setData({
       'Classes': classes,
-
     });
   }
-
 
 //profile list from snapshot
 
