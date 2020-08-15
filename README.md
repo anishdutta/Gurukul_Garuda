@@ -1,10 +1,12 @@
 # Gurukul App
+This directory contains the full implementation of a basic application for the Android platform, demonstrating the basic facilities that applications
+will use.  You can run the application either directly from the "test"list in the app launcher.
 
-A new Flutter application.
+The files contained here:
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is a starting point for a mobile appliaction which has features such as video calling, adding timetable, doubt forum and academic planner.
 
 A few resources to get you started if this is your first Flutter project:
 
