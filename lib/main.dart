@@ -6,6 +6,7 @@ import 'package:educationapp/time_table/time_table.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dashboard/class_id_page.dart';
+import 'Create Class/create_class.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         future: getCurrentUser(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return ClassIDPage();
+            return CreateClass();
           } else {
             return LoginScreen();
           }

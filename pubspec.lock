@@ -160,6 +160,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.0"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.4.6"
   flutter_staggered_grid_view:
     dependency: "direct main"
     description:
@@ -205,6 +212,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.9.1+1"
+  grouped_buttons:
+    dependency: "direct main"
+    description:
+      name: grouped_buttons
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.4"
   http:
     dependency: transitive
     description:
@@ -324,6 +338,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.3"
+  simple_animations:
+    dependency: "direct main"
+    description:
+      name: simple_animations
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.3.12"
   sky_engine:
     dependency: transitive
     description: flutter

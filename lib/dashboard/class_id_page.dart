@@ -89,10 +89,10 @@ class _ClassIDPageState extends State<ClassIDPage> {
                   onPressed: () {
                     Database(uid: loggedInUser.uid).updateUserData3(
                         '$Code');
-//                    Navigator.push(
-//                        context,
-//                        PageTransition(
-//                            type: PageTransitionType.fade, child: Dashboard()));
+                    Navigator.push(
+                        context,
+                        PageTransition(
+                            type: PageTransitionType.fade, child: Dashboard()));
                   },
                   child: Text(
                     'Proceed',
